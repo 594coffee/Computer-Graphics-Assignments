@@ -21,5 +21,6 @@
 ![circle](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/circle.png)
 ![polygon](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/polygon.png)
 ![ellipse](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/ellipse.png)
+![curve](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/curve.png)
 ![pencil](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/pencil.png)
 ![eraser](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/eraser.png)
