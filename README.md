@@ -17,3 +17,9 @@
 - [x] [+1.5 Semester Score] Add some features that were not present in this assignment.
 - 按下 + 或 - 來控制筆刷大小顯示在左下角
 - 有運用ChatGPT輔助，聊天紀錄如下https://chatgpt.com/share/68e3c6b9-03a0-8008-abd3-0648c8410e87
+![line](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/line.png)
+![circle](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/circle.png)
+![polygon](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/polygon.png)
+![ellipse](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/ellipse.png)
+![pencil](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/pencil.png)
+![eraser](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/eraser.png)
