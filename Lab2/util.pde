@@ -20,17 +20,6 @@ public void CGLine(float x1, float y1, float x2, float y2) {
         }
     }
 }
-public void drawLineSSAA(float x1, float y1, float x2, float y2, int ssaa){
-    // ssaa = 2 表示 2x super-sampling
-    int steps = ssaa;
-    for(int i=0;i<steps;i++){
-        for(int j=0;j<steps;j++){
-            float dx = i/(float)steps;
-            float dy = j/(float)steps;
-            CGLine(x1+dx, y1+dy, x2+dx, y2+dy);
-        }
-    }
-}
 
 public boolean outOfBoundary(float x, float y) {
     if (x < 0 || x >= width || y < 0 || y >= height)

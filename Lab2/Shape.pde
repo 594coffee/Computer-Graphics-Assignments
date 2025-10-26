@@ -59,45 +59,47 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public void drawShape(){                      
+    public void drawShape(){
+        // SSAA factor
+        int SSAA = 2; // 2x supersampling
+    
         Matrix4 model_matrix = localToWorld();
         Vector3[] t_pos = new Vector3[vertex.length];
         for(int i=0;i<t_pos.length;i++){
             t_pos[i] = model_matrix.mult(vertex[i].getVector4(1)).xyz();                       
         }
     
-        // 裁切
         t_pos = Sutherland_Hodgman_algorithm(t_pos, engine.boundary);
     
-        // 映射到畫布
         for(int i=0;i<t_pos.length;i++){
             t_pos[i] = new Vector3(map(t_pos[i].x,-1,1,20,520),
-                                   map(t_pos[i].y,-1,1,50,height-50), 0);
+                                    map(t_pos[i].y,-1,1,50,height-50),0);
         }
     
-        // 計算包圍盒，用於填色
         Vector3[] minmax = findBoundBox(t_pos);
     
-        loadPixels();       
-        for(int i = (int)minmax[0].x; i <= (int)minmax[1].x; i++){
-            for(int j = (int)minmax[0].y; j <= (int)minmax[1].y; j++){
-                if(pnpoly(i,j,t_pos)){                    
-                    drawPoint(i,j,color(100));
+        loadPixels();
+        for(int i = (int)minmax[0].x; i <= minmax[1].x; i++){
+            for(int j = (int)minmax[0].y; j <= minmax[1].y; j++){
+                // 平均多重采樣
+                float sum = 0;
+                for(int sx=0; sx<SSAA; sx++){
+                    for(int sy=0; sy<SSAA; sy++){
+                        float px = i + (sx)/SSAA;
+                        float py = j + (sy)/SSAA;
+                        if(pnpoly(px, py, t_pos)){
+                            sum += 1;
+                        }
+                    }
+                }
+                float c = 100 * (sum / (SSAA*SSAA));
+                if(pnpoly(i, j, t_pos)){
+                    drawPoint(i, j, color(c));
                 }
             }
         }
         updatePixels();
-    
-        // SSAA 繪製外邊
-        int ssaa = 2; // 2x SSAA
-        for(int i=0;i<t_pos.length;i++){          
-            drawLineSSAA(t_pos[i].x, t_pos[i].y,
-                         t_pos[(i+1)%t_pos.length].x,
-                         t_pos[(i+1)%t_pos.length].y, ssaa);
-        }
     }
-
-    
 }
 
 
@@ -116,42 +118,46 @@ public class Star extends Shape{
         return "Star";
     }
     @Override
-    public void drawShape(){                      
+    public void drawShape(){
+        // SSAA factor
+        int SSAA = 2; // 2x supersampling
+    
         Matrix4 model_matrix = localToWorld();
         Vector3[] t_pos = new Vector3[vertex.length];
         for(int i=0;i<t_pos.length;i++){
             t_pos[i] = model_matrix.mult(vertex[i].getVector4(1)).xyz();                       
         }
     
-        // 裁切
         t_pos = Sutherland_Hodgman_algorithm(t_pos, engine.boundary);
     
-        // 映射到畫布
         for(int i=0;i<t_pos.length;i++){
             t_pos[i] = new Vector3(map(t_pos[i].x,-1,1,20,520),
-                                   map(t_pos[i].y,-1,1,50,height-50), 0);
+                                    map(t_pos[i].y,-1,1,50,height-50),0);
         }
     
-        // 計算包圍盒，用於填色
         Vector3[] minmax = findBoundBox(t_pos);
     
-        loadPixels();       
-        for(int i = (int)minmax[0].x; i <= (int)minmax[1].x; i++){
-            for(int j = (int)minmax[0].y; j <= (int)minmax[1].y; j++){
-                if(pnpoly(i,j,t_pos)){                    
-                    drawPoint(i,j,color(100));
+        loadPixels();
+        for(int i = (int)minmax[0].x; i <= minmax[1].x; i++){
+            for(int j = (int)minmax[0].y; j <= minmax[1].y; j++){
+                // 平均多重采樣
+                float sum = 0;
+                for(int sx=0; sx<SSAA; sx++){
+                    for(int sy=0; sy<SSAA; sy++){
+                        float px = i + (sx)/SSAA;
+                        float py = j + (sy)/SSAA;
+                        if(pnpoly(px, py, t_pos)){
+                            sum += 1;
+                        }
+                    }
+                }
+                float c = 100 * (sum / (SSAA*SSAA));
+                if(pnpoly(i, j, t_pos)){
+                    drawPoint(i, j, color(c));
                 }
             }
         }
         updatePixels();
-    
-        // SSAA 繪製外邊
-        int ssaa = 2; // 2x SSAA
-        for(int i=0;i<t_pos.length;i++){          
-            drawLineSSAA(t_pos[i].x, t_pos[i].y,
-                         t_pos[(i+1)%t_pos.length].x,
-                         t_pos[(i+1)%t_pos.length].y, ssaa);
-        }
     }
    
 }
