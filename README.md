@@ -1,2 +1,2 @@
 # Computer-Graphics-Assignments
-Lab
+作業分為不同Branch
