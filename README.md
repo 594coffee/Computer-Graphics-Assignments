@@ -40,4 +40,6 @@
 |Outside	|Inside	|保留交點和 E|
 |Outside	|Outside	|不保留任何點|
 - 透過這樣逐邊裁剪，最終保留留在視窗內的多邊形部分。
-- [ ] [+1.5 Semester Score] Successfully implement SSAA
+- [x] [+1.5 Semester Score] Successfully implement SSAA
+![Rectangle](Lab2/picture/Rectangle.png)
+![Rectangle&Star](Lab2/picture/Rectangle&Star.png)
