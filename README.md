@@ -1,2 +1,26 @@
-# Computer-Graphics-Assignments
-Lab
+- [x] (25%) Correctly implement the line algorithm.
+- 使用 Bresenham’s Line Algorithm
+- 核心想法：在格點上近似一條線。
+- [x] (25%) Correctly implement the circle algorithm.
+- 使用 Midpoint Circle Algorithm
+- 利用對稱性一次畫 8 個點。
+- [x] (15%) Correctly implement the ellipse algorithm.
+- 使用 Midpoint Ellipse Algorithm
+- 分成兩個區域處理（斜率 > -1 與斜率 < -1）。
+- [x] (15%) Correctly implement the curve algorithm.
+- 使用 Cubic Bezier公式
+- 依距離自適應，先計算貝塞爾曲線的長度近似值（或用兩端距離）
+- 再根據長度決定步數，每個點之間距離接近 1px
+- [x] (20%) Correctly implement the eraser.
+- 在矩形區域內，把像素改成背景色 color(250)。
+- 顏色背景色與不同才做更替
+- [x] [+1.5 Semester Score] Add some features that were not present in this assignment.
+- 按下 + 或 - 來控制筆刷大小顯示在左下角
+- 有運用ChatGPT輔助，聊天紀錄如下https://chatgpt.com/share/68e3c6b9-03a0-8008-abd3-0648c8410e87
+![line](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/line.png)
+![circle](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/circle.png)
+![polygon](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/polygon.png)
+![ellipse](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/ellipse.png)
+![curve](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/curve.png)
+![pencil](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/pencil.png)
+![eraser](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/eraser.png)
