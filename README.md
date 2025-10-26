@@ -17,10 +17,10 @@
 - [x] [+1.5 Semester Score] Add some features that were not present in this assignment.
 - 按下 + 或 - 來控制筆刷大小顯示在左下角
 - 有運用ChatGPT輔助，聊天紀錄如下https://chatgpt.com/share/68e3c6b9-03a0-8008-abd3-0648c8410e87
-![line](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/line.png)
-![circle](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/circle.png)
-![polygon](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/polygon.png)
-![ellipse](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/ellipse.png)
-![curve](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/curve.png)
-![pencil](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/pencil.png)
-![eraser](https://github.com/594coffee/Computer-Graphics-Assignments/blob/main/Lab/picture/eraser.png)
+![line](Lab1/picture/line.png)
+![circle](Lab1/picture/circle.png)
+![polygon](Lab1/picture/polygon.png)
+![ellipse](Lab1/picture/ellipse.png)
+![curve](Lab1/picture/curve.png)
+![pencil](Lab1/picture/pencil.png)
+![eraser](Lab1/picture/eraser.png)
