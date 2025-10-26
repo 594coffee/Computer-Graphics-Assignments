@@ -41,5 +41,6 @@
 |Outside	|Outside	|不保留任何點|
 - 透過這樣逐邊裁剪，最終保留留在視窗內的多邊形部分。
 - [x] [+1.5 Semester Score] Successfully implement SSAA
+- 有運用ChatGPT輔助，聊天紀錄如下https://chatgpt.com/share/68fe2af1-3df8-8008-ae06-dd2118bb4cae
 ![Rectangle](Lab2/picture/Rectangle.png)
 ![Rectangle&Star](Lab2/picture/Rectangle&Star.png)
